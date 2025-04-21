@@ -1,0 +1,429 @@
+=== PYTHON PROGRAMMING QUESTIONS, CODE, AND OUTPUTS ===
+
+Question: Write a program to print all even numbers from 1 to 50 using a loop.
+>>> Code:
+for i in range(1, 51):
+    if i % 2 == 0:
+        print(i, end=' ')
+print()
+>>> Output:
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50
+
+--------------------------------------------------
+
+Question: Use a loop to count and print the number of vowels in a string.
+>>> Code:
+sample_str = "Hello World"
+count = sum(1 for c in sample_str.lower() if c in 'aeiou')
+print(count)
+>>> Output:
+3
+
+--------------------------------------------------
+
+Question: Write a program to print the factorial of a given number using a loop.
+>>> Code:
+n = 5
+fact = 1
+for i in range(1, n+1):
+    fact *= i
+print(fact)
+>>> Output:
+120
+
+--------------------------------------------------
+
+Question: Write a program to find the average of 5 numbers.
+>>> Code:
+numbers = [10, 20, 30, 40, 50]
+print(sum(numbers) / len(numbers))
+>>> Output:
+30.0
+
+--------------------------------------------------
+
+Question: Write a program to print the below pattern:
+*
+* *
+* * *
+* * * *
+* * * * *
+>>> Code:
+for i in range(1, 6):
+    print('* ' * i)
+>>> Output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+
+--------------------------------------------------
+
+Question: Write a program to display the multiplication table of a number entered by the user.
+>>> Code:
+num = 7
+for i in range(1, 11):
+    print(f"{num} x {i} = {num*i}")
+>>> Output:
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+7 x 10 = 70
+
+--------------------------------------------------
+
+Question: Use a loop to calculate the sum of the first 100 natural numbers.
+>>> Code:
+print(sum(range(1, 101)))
+>>> Output:
+5050
+
+--------------------------------------------------
+
+Question: Write a program to check if a given number is divisible by 2 and 4.
+>>> Code:
+num = 8
+print(num % 2 == 0 and num % 4 == 0)
+>>> Output:
+True
+
+--------------------------------------------------
+
+Question: Check if a given number is odd or even.
+>>> Code:
+num = 7
+print('Even' if num % 2 == 0 else 'Odd')
+>>> Output:
+Odd
+
+--------------------------------------------------
+
+Question: Write a program to check if a string contains the character 't' in it.
+>>> Code:
+s = "test"
+print('t' in s)
+>>> Output:
+True
+
+--------------------------------------------------
+
+Question: Write a program to check if a number is divisible by 5 and 11.
+>>> Code:
+num = 55
+print(num % 5 == 0 and num % 11 == 0)
+>>> Output:
+True
+
+--------------------------------------------------
+
+Question: Write a program to check if a string contains the character 'a' in it.
+>>> Code:
+s = "apple"
+print('a' in s)
+>>> Output:
+True
+
+--------------------------------------------------
+
+Question: Convert a list into a tuple using type-cast.
+>>> Code:
+lst = [1, 2, 3]
+print(tuple(lst))
+>>> Output:
+(1, 2, 3)
+
+--------------------------------------------------
+
+Question: Take two sets and find their intersection.
+>>> Code:
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+print(set1 & set2)
+>>> Output:
+{2, 3}
+
+--------------------------------------------------
+
+Question: Write a Python program to find the largest and smallest number in a list.
+>>> Code:
+lst = [5, 3, 9, 1]
+print(max(lst), min(lst))
+>>> Output:
+9 1
+
+--------------------------------------------------
+
+Question: Take a list of numbers and print the sum of all even numbers.
+>>> Code:
+lst = [1, 2, 3, 4, 5, 6]
+print(sum(i for i in lst if i % 2 == 0))
+>>> Output:
+12
+
+--------------------------------------------------
+
+Question: Create a program to sort a list of integers in descending order.
+>>> Code:
+lst = [3, 1, 4, 2]
+print(sorted(lst, reverse=True))
+>>> Output:
+[4, 3, 2, 1]
+
+--------------------------------------------------
+
+Question: Take a list of words and print the words that start with a vowel.
+>>> Code:
+words = ["apple", "banana", "orange", "umbrella", "kiwi"]
+print([w for w in words if w[0].lower() in 'aeiou'])
+>>> Output:
+['apple', 'orange', 'umbrella']
+
+--------------------------------------------------
+
+Question: Accept a string and print it in reverse using slicing.
+>>> Code:
+s = "hello"
+print(s[::-1])
+>>> Output:
+olleh
+
+--------------------------------------------------
+
+Question: Accept a string and replace all vowels with a *.
+>>> Code:
+s = "hello world"
+print(''.join('*' if c.lower() in 'aeiou' else c for c in s))
+>>> Output:
+h*ll* w*rld
+
+--------------------------------------------------
+
+Question: Create a dictionary with 5 elements where the value of each is the squared value of the key.
+>>> Code:
+print({i: i*i for i in range(1, 6)})
+>>> Output:
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+--------------------------------------------------
+
+Question: Create a tuple and demonstrate unpacking it into variables.
+>>> Code:
+t = (1, 2, 3)
+a, b, c = t
+print(a, b, c)
+>>> Output:
+1 2 3
+
+--------------------------------------------------
+
+Question: Write a program to create a new text file and write your name into it.
+>>> Code:
+filename = '/mnt/data/test_q.txt'
+with open(filename, 'w') as f:
+    f.write('Your Name')
+with open(filename) as f:
+    print(f.read())
+>>> Output:
+Your Name
+
+--------------------------------------------------
+
+Question: Write a program to append user input to an existing file.
+>>> Code:
+filename = '/mnt/data/test_q.txt'
+with open(filename, 'a') as f:
+    f.write('\nAppended text')
+with open(filename) as f:
+    print(f.read())
+>>> Output:
+Your Name
+Appended text
+
+--------------------------------------------------
+
+Question: Create a program that reads a file line by line and prints each line.
+>>> Code:
+filename = '/mnt/data/test_q.txt'
+with open(filename) as f:
+    for line in f:
+        print(line.strip())
+>>> Output:
+Your Name
+Appended text
+
+--------------------------------------------------
+
+Question: Write a program to count the number of lines in a file.
+>>> Code:
+filename = '/mnt/data/test_q.txt'
+with open(filename) as f:
+    print(len(f.readlines()))
+>>> Output:
+2
+
+--------------------------------------------------
+
+Question: Write a program to count the total number of words in a file.
+>>> Code:
+filename = '/mnt/data/test_q.txt'
+with open(filename) as f:
+    print(len(f.read().split()))
+>>> Output:
+4
+
+--------------------------------------------------
+
+Question: Write a program that overwrites a file with new content.
+>>> Code:
+filename = '/mnt/data/test_q.txt'
+with open(filename, 'w') as f:
+    f.write('New Content')
+with open(filename) as f:
+    print(f.read())
+>>> Output:
+New Content
+
+--------------------------------------------------
+
+Question: Check if a file exists before reading or writing using the os module.
+>>> Code:
+print(os.path.exists('/mnt/data/test_q.txt'))
+>>> Output:
+True
+
+--------------------------------------------------
+
+Question: Create a class Person with attributes name and age. Write a method to display the person's details.
+>>> Code:
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+p = Person('Alice', 30)
+p.display()
+>>> Output:
+Name: Alice, Age: 30
+
+--------------------------------------------------
+
+Question: Write a class Rectangle with methods to compute area and perimeter.
+>>> Code:
+class Rectangle:
+    def __init__(self, l, w):
+        self.l = l
+        self.w = w
+    def area(self):
+        return self.l * self.w
+    def perimeter(self):
+        return 2*(self.l + self.w)
+r = Rectangle(5, 3)
+print(r.area(), r.perimeter())
+>>> Output:
+15 16
+
+--------------------------------------------------
+
+Question: Define a class Circle with a method to calculate area. Accept radius as input from the user.
+>>> Code:
+class Circle:
+    def __init__(self, r):
+        self.r = r
+    def area(self):
+        return math.pi * self.r * self.r
+c = Circle(4)
+print(c.area())
+>>> Output:
+50.26548245743669
+
+--------------------------------------------------
+
+Question: Define a class Book with attributes title, author, and price. Write a method to display book details.
+>>> Code:
+class Book:
+    def __init__(self, t, a, p):
+        self.title = t
+        self.author = a
+        self.price = p
+    def display(self):
+        print(f"Title: {self.title}, Author: {self.author}, Price: {self.price}")
+b = Book('1984', 'Orwell', 9.99)
+b.display()
+>>> Output:
+Title: 1984, Author: Orwell, Price: 9.99
+
+--------------------------------------------------
+
+Question: Create a base class Animal and a subclass Dog that adds a method bark().
+>>> Code:
+class Animal:
+    def __init__(self, name):
+        self.name = name
+class Dog(Animal):
+    def bark(self):
+        print(f"{self.name} says Woof!")
+d = Dog('Buddy')
+d.bark()
+>>> Output:
+Buddy says Woof!
+
+--------------------------------------------------
+
+Question: Create a class BankAccount with attributes account_holder and balance. Initialize them through a constructor.
+>>> Code:
+class BankAccount:
+    def __init__(self, holder, balance):
+        self.holder = holder
+        self.balance = balance
+    def display(self):
+        print(f"Holder: {self.holder}, Balance: {self.balance}")
+acc = BankAccount('Bob', 1000)
+acc.display()
+>>> Output:
+Holder: Bob, Balance: 1000
+
+--------------------------------------------------
+
+Question: Showcase the use of the super() method in OOPs by incorporating in a program.
+>>> Code:
+class Base:
+    def __init__(self):
+        print('Base init')
+class Derived(Base):
+    def __init__(self):
+        super().__init__()
+        print('Derived init')
+d = Derived()
+>>> Output:
+Base init
+Derived init
+
+--------------------------------------------------
+
+Question: Write a class Patient that stores name and disease. Use methods to access and update data securely.
+>>> Code:
+class Patient:
+    def __init__(self, name, disease):
+        self._name = name
+        self._disease = disease
+    def get_info(self):
+        return (self._name, self._disease)
+    def update_disease(self, new):
+        self._disease = new
+pat = Patient('John', 'Flu')
+print(pat.get_info())
+pat.update_disease('Cold')
+print(pat.get_info())
+>>> Output:
+('John', 'Flu')
+('John', 'Cold')
+
+--------------------------------------------------
